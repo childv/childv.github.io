@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html>			
-	<head>
-		<title>Veronica Child</title>
-		<!-- link to main stylesheet -->
-		<link rel="stylesheet" type="text/css" href="/css/main.css">
-	</head>
+<html>
 	
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="description" content="Welcome to the personal website of Veronica Child" />
+<title>Veronica Child's Website</title>
+		
+<!-- css -->
+<link rel="stylesheet" type="text/css" href="/css/main.css">
+	
+<!-- js -->
+<script>
+function headerResize() {
+	window.addEventListener('scroll', function(e) {
+		var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+		    shrinkOn = 300,
+		    header = document.querySelector("header");
+		// make header smaller past certain distance
+		if (distanceY > shrinkOn) {
+			header.classList.add("smaller");
+		// else blow it back up
+		} else {
+			if (header.classList.contains("smaller")) {
+				header.classList.remove("smaller");
+			
+</head>
+	
+<body>
 	<!-- animated resizing header on scroll,
 	tutorial thanks to http://callmenick.com/post/animated-resizing-header-on-scroll-->
 	<header>
@@ -22,7 +44,6 @@
 		</div>
 	</header>
 	
-	<body>
 		<div class="container">
     		<div class="blurb">
         		<h1>Hi there, I'm Veronica Child</h1>
@@ -35,5 +56,5 @@
         		<li><a href="https://github.com/childv">github.com/childv</a></li>
 			</ul>
 		</footer>
-	</body>
+</body>
 </html>
